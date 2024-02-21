@@ -1,0 +1,535 @@
+@import url('fontawesome-all.css');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@font-face {
+    font-family: 'massilloregular';
+    src: url('massillo/massillo-webfont.eot');
+    src: url('massillo/massillo-webfont.eot?#iefix') format('embedded-opentype'),
+         url('massillo/massillo-webfont.woff2') format('woff2'),
+         url('massillo/massillo-webfont.woff') format('woff'),
+         url('massillo/massillo-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+:root {
+    --body: 'Montserrat', Helvetica, Arial, sans-serif;
+    --light: 300;
+    --regular: 400;
+    --medium: 500;
+    --semibold: 600;
+    --bold: 700;
+    --extrabold: 800;
+    --italik: italic;
+    --beyaz: #FFF;
+    --siyah: #000;
+    --bordo: #600;
+    --koyu-altin: #b66428;
+    --acik-altin: #c0802d;
+    --kirmizi: #f00;
+    --koyu-gri: #222;
+    --gri: #444;
+    --acik-gri: #666;
+    --cok-acik-gri: #dedede;
+    --cok-cok-acik-gri: #f3f3f3;
+}
+
+.siyah {
+	color: var(--siyah) !important;
+}
+.beyaz {
+	color: var(--beyaz) !important;
+}
+.kalin {
+	font-weight: var(--bold);
+}
+ 
+
+html, body {
+	height: 100% !important;
+	width: 100% !important;
+}
+body {
+    background-color: transparent;
+    font-family: var(--body);
+    font-size: 16px;
+    line-height: 1.5;
+}
+* {
+	outline: none;
+	font-variant-ligatures: none;
+}
+a, a:visited, a:link {
+	color: var(--bordo);
+	text-decoration: none;
+}
+a:hover, a:focus {
+	color: var(--bordo);
+	text-decoration: underline;
+}
+a.kapsa {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+}
+a.bordo-dugme {
+    display: inline-block;
+    margin-right: 16px;
+    padding: 8px 48px;
+    background-color: var(--beyaz);
+    border: 1px solid var(--bordo);
+    text-align: center;
+    color: var(--bordo) !important;
+    font-weight: 600;
+}
+a.bordo-dugme:hover {
+    background-color: var(--bordo);
+    color: var(--beyaz) !important;
+    text-decoration: none;
+}
+p {
+	margin-bottom: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	position: relative;
+	z-index: 1;
+	margin-bottom: 16px;
+	font-weight: 700;
+    color: var(--siyah);
+}
+
+h1 {
+	font-size: 64px;
+}
+h2 {
+	font-size: 48px;
+}
+h3 {
+	font-size: 32px;
+}
+h6 {
+	font-size: 16px;
+}
+
+small {
+	font-size: 12px;
+	line-height: 1;
+}
+
+::-moz-selection {
+	color: var(--siyah);
+	background: var(--cok-cok-acik-gri);
+}
+::selection {
+	color: var(--siyah);
+	background: var(--cok-cok-acik-gri);
+}
+::placeholder {
+	font-size: 16px;
+	font-weight: 400;
+	opacity: .24;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+/* Firefox */
+input[type=number] {
+	-moz-appearance: textfield;
+}
+
+.container {
+	position: relative;
+	padding: 0 16px;
+	width: 96%;
+    max-width: 1344px;
+}
+.container-fluid {
+	position: relative;
+	padding: 0 16px;
+}
+.row {
+	margin-right: -16px;
+	margin-left: -16px;
+}
+[class*='col-'] {
+	padding-right: 16px;
+	padding-left: 16px;
+}
+.gorsel {
+    position: relative;
+}
+.gorsel::after {
+    display: block;
+    content: "";
+}
+.gorsel.cok-ince-gorsel::after {
+    padding-top: 24%;
+}
+.gorsel.ince-gorsel::after {
+    padding-top: 40%;
+}
+.gorsel.yarim-gorsel::after {
+    padding-top: 50%;
+}
+.gorsel.hd-gorsel::after {
+    padding-top: 56.25%;
+}
+.gorsel.kare-gorsel::after {
+    padding-top: 100%;
+}
+.gorsel.dik-gorsel::after {
+    padding-top: calc(200% + 24px);
+}
+.gorsel img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.tepe {
+    padding: 12px;
+    background-color: var(--bordo);
+    text-align: center;
+    font-weight: 600;
+    color: var(--beyaz);
+}
+.tepe span {
+    font-weight: 800;
+}
+.tepe span a {
+    color: var(--beyaz) !important;
+    font-style: italic;
+    text-decoration: underline;
+}
+.tepe span a:hover {
+    text-decoration: none;
+}
+header {
+    margin: 0;
+}
+
+#komut .container {
+    max-width: 1504px;
+}
+.navbar {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28102, 0, 0, 1.00%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    justify-content: space-between;
+}
+.navbar-toggler {
+    position: absolute;
+    top: 36px;
+    right: 0;
+    border-color: var(--bordo) !important;
+}
+.navbar-toggler,
+.navbar-toggler[aria-expanded="false"],
+.navbar-toggler[aria-expanded="true"] {
+    outline: none;
+}
+.navbar-brand img {
+    width: 140px;
+}
+.navbar-collapse {
+    justify-content: center;
+}
+.nav-link {
+    margin-right: 48px;
+    margin-left: 48px;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    font-weight: 600;
+    color: var(--bordo) !important;
+}
+.nav-link:hover {
+    text-decoration: none;
+    color: var(--gri) !important;
+}
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+.dropdown-toggle::after {
+    display: none;
+}
+.komut-sag-simgeler a {
+    margin-left: 32px;
+}
+.komut-sag-simgeler a:hover {
+    text-decoration: none;
+}
+.komut-sag-simgeler img {
+    height: 24px;
+}
+
+
+.kayan-gorseller {
+    position: relative;
+    width: 96%;
+    max-width: 1376px;
+    overflow: hidden;
+}
+.kayan-gorseller .item {
+    position: relative;
+    padding: 0 16px;
+    width: 100%;
+    text-align: center;
+}
+.kayan-gorseller .owl-nav {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    margin-top: 0;
+    width: 100%;
+}
+.kayan-gorseller .owl-nav button.owl-next,
+.kayan-gorseller .owl-nav button.owl-prev {
+    position: absolute;
+    width: 10px;
+    height: 72px;
+    background-position: center !important;
+    font-size: 0;
+    color: var(--beyaz);
+    opacity: 1;
+    background-size: 10px 72px !important;
+}
+.kayan-gorseller .owl-nav button.owl-prev {
+    left: -16px;
+    right: auto;
+    background: url(../gorseller/geri.png) transparent;
+    background-repeat: no-repeat;
+}
+.kayan-gorseller .owl-nav button.owl-prev:hover {
+    background: url(../gorseller/geri-ust.png) rgb(255,255,255);
+    background-repeat: no-repeat;
+}
+.kayan-gorseller .owl-nav button.owl-next {
+    right: 12px;
+    left: auto;
+    background: url(../gorseller/ileri.png);
+    background-repeat: no-repeat;
+}
+.kayan-gorseller .owl-nav button.owl-next:hover {
+    background: url(../gorseller/ileri-ust.png) rgb(255,255,255);
+    background-repeat: no-repeat;
+}
+
+.as-urunler {
+    margin-top: 32px;
+}
+.as-urun {
+    margin-bottom: 32px;
+}
+
+.ozellikler {
+    margin-top: 128px;
+    margin-bottom: 96px;
+}
+.ozellik {
+    margin-bottom: 32px;
+    color: var(--bordo);
+}
+.ozellik h6 {
+    color: var(--bordo);
+}
+.ozellik img {
+    margin-bottom: 16px;
+    max-width: 100%;
+}
+
+.sagli-sollu {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 48px;
+}
+.sagli-sollu-gorsel {
+    flex: 0 0 60%;
+}
+.sagli-sollu-metin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    height: 100%;
+    flex: 0 0 40%;
+    text-align: center;
+    color: var(--bordo);
+}
+.sagli-sollu-metin p {
+    width: 50%;
+}
+.sagli-sollu-metin h5 {
+    text-align: center;
+    color: var(--bordo);
+}
+.sira-1 {
+    order: 1;
+}
+.sira-2 {
+    order: 2;
+}
+
+.cok-satan-urunler {
+    margin: 80px auto;
+}
+.cok-satan {
+    position: relative;
+}
+.cok-satan .gorsel {
+    margin-bottom: 16px;
+}
+.begen {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+    font-size: 32px;
+}
+.begen a .fa-heart {
+    color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: var(--koyu-altin);
+}
+.begen a:hover .fa-heart {
+    color: var(--koyu-altin);
+}
+.cok-satan a h6 {
+    color: var(--bordo);
+}
+
+
+/* EKRAN AYARLAMALARI */
+/* --------- ÇOK KÜÇÜK EKRANLAR --------- */
+@media (max-width: 369px) {
+    .navbar-brand {
+        margin-right: 0;
+    }
+    .navbar-brand img {
+        width: 104px;
+    }
+}
+@media (max-width: 479px) {
+}
+
+/* --------------- col-xs --------------- */
+@media (min-width: 370px) and (max-width: 575px) and (orientation: landscape) {
+}
+
+@media (max-width: 575px) {
+    .sagli-sollu {
+        margin-bottom: 0;
+        padding: 24px;
+    }
+    .sagli-sollu-metin p {
+        width: 100%;
+    }
+}
+@media (max-width: 575px) and (orientation: portrait) {
+}
+
+/* --------------- col-sm --------------- */
+@media (min-width: 576px) {
+}
+@media (min-width: 576px) and (max-width: 767px) {
+    .sagli-sollu {
+        padding: 0 32px;
+    }    
+}
+@media (min-width: 576px) and (max-width: 767px) and (orientation: landscape) {
+}
+@media (max-width: 767px) {
+	.kayan-gorseller .item {
+        padding: 0;
+    }
+    .sagli-sollu-gorsel,
+    .sagli-sollu-metin {
+        margin-bottom: 32px;
+        flex: 0 0 100%;
+    }
+    .sira-1 {
+        order: 2;
+    }
+    .sira-2 {
+        order: 1;
+    }
+}
+@media (max-width: 767px) and (orientation: landscape) {
+}
+
+/* --------------- col-md --------------- */
+@media (min-width: 768px) and (max-width: 991px) {
+    
+}
+@media (min-width: 768px) {
+    
+}
+@media (max-width: 991px) and (orientation: portrait) {
+    
+}
+
+@media (max-width: 991px) {
+    .komut-sag-simgeler {
+        position: absolute;
+        top: 44px;
+        right: 0px;
+        margin-right: 80px;
+    }
+    .komut-sag-simgeler a {
+        margin-left: 12px;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .nav-link {
+        margin-right: 12px;
+        margin-left: 12px;
+    }
+    .komut-sag-simgeler a {
+        margin-left: 12px;
+    }
+}
+@media (min-width: 992px) {
+    
+}
+
+/* --------------- col-xl --------------- */
+@media (min-width: 1200px) and (max-width: 1399px) {
+    .nav-link {
+        margin-right: 24px;
+        margin-left: 24px;
+    }
+    .komut-sag-simgeler a {
+        margin-left: 24px;
+    }
+}
+
+/* --------------- col-xxl --------------- */
+@media (min-width: 1400px) {
+}
+
+@media (max-width: 767px) and (orientation: landscape) {
+}
+@media (orientation: portrait) {
+}
+@media (orientation: portrait) and (max-width: 767px){
+}
+@media (orientation: portrait) and (width: 768px){
+}
+@media screen and (device-aspect-ratio: 4/3) {
+}
